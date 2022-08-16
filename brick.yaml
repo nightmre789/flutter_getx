@@ -1,0 +1,25 @@
+name: flutter_getx
+description: Generates a new Flutter app with GetX architecture
+version: 0.1.0
+repository: https://github.com/Dardila11/mason_bricks/tree/master/bricks/clean_app
+environment:
+   mason: ">=0.1.0-dev <0.1.0"
+
+vars:
+   name:
+      type: string
+      description: App name
+      default: flutter_getx
+      prompt: What is the name of the app?
+
+   description:
+      type: string
+      description: App description
+      default: Flutter + GetX App
+      prompt: What is the app's description?
+
+   org:
+      type: string
+      description: Organization name
+      default: com.folio3
+      prompt: What is the organization name? (eg. com.folio3)
