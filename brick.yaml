@@ -9,7 +9,7 @@ vars:
    name:
       type: string
       description: App name
-      default: flutter_get
+      default: flutter_getx_app
       prompt: What is the app's name?
 
    description:

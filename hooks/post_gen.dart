@@ -6,6 +6,11 @@ Future<void> run(HookContext context) async {
 
   await installDependencies(context);
   await updatePubspec(context);
+
+  context.logger.success('Successfully created {{name}}!');
+  context.logger.info('Run the following commands to get started: ');
+  context.logger.info('  cd {{name}}');
+  context.logger.info('  flutter run');
 }
 
 Future<void> cleanupFiles(HookContext context) async {
