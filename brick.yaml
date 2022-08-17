@@ -1,7 +1,7 @@
 name: flutter_getx
 description: Generates a new Flutter app with GetX architecture
-version: 0.1.0
-repository: https://github.com/Dardila11/mason_bricks/tree/master/bricks/clean_app
+version: 0.2.0
+repository: https://github.com/nightmre789/flutter_getx
 environment:
    mason: ">=0.1.0-dev <0.1.0"
 
