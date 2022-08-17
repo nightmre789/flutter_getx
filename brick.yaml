@@ -9,8 +9,8 @@ vars:
    name:
       type: string
       description: App name
-      default: flutter_getx
-      prompt: What is the name of the app?
+      default: flutter_get
+      prompt: What is the app's name?
 
    description:
       type: string
@@ -21,5 +21,5 @@ vars:
    org:
       type: string
       description: Organization name
-      default: com.folio3
-      prompt: What is the organization name? (eg. com.folio3)
+      default: com.example
+      prompt: What is the organization's name?
