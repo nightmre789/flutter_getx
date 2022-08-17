@@ -1,5 +1,3 @@
-# 1.0.0
+# 0.1.0
 
-## version 1.0.0:
-
-### Basic GetX structure with routing, state management, and dependency injection
+## basic GetX structure with routing, state management, and dependency injection
