@@ -1,3 +1,4 @@
+import 'package:{{name}}/constants/common/theme_constants.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +22,7 @@ class Main extends StatelessWidget {
       title: "base_app",
       initialRoute: initialRoute,
       getPages: Routes.routes,
+      theme: AppTheme.appTheme,
     );
   }
 }

@@ -16,8 +16,16 @@ class HomePage extends GetView<HomeController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(pushButtonText),
-            Obx(() => Text(controller.count.toString())),
+            Text(
+              pushButtonText,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            Obx(
+                  () => Text(
+                controller.count.toString(),
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+            ),
             const SizedBox(height: 20),
             TextButton(
               onPressed: () => Get.toNamed("/other"),
