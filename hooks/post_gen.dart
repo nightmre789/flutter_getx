@@ -7,15 +7,16 @@ Future<void> run(HookContext context) async {
   await installDependencies(context);
   await updatePubspec(context);
 
-  context.logger.success('Successfully created {{name}}!');
+  context.logger.success('Successfully created ${context.vars['name']}!');
   context.logger.info('Run the following commands to get started: ');
-  context.logger.info('  cd {{name}}');
+  context.logger.info('  cd ${context.vars['name']}');
+  context.logger.info('  cd ${context.vars['name']}');
   context.logger.info('  flutter run');
 }
 
 Future<void> cleanupFiles(HookContext context) async {
   final progress = context.logger.progress('Cleaning up directory ...');
-  await Directory('./{{name}}/')
+  await Directory('./${context.vars['name']}/')
       .list(recursive: true)
       .where((element) => element.toString().contains('.gitkeep'))
       .listen((file) {
@@ -29,7 +30,7 @@ installDependencies(HookContext context) async {
   await Process.run(
     'flutter',
     ['pub', 'add', 'get'],
-    workingDirectory: './{{name}}',
+    workingDirectory: './${context.vars['name']}',
     runInShell: true,
   );
   progress.complete('Installed dependencies');
@@ -37,7 +38,7 @@ installDependencies(HookContext context) async {
 
 updatePubspec(HookContext context) async {
   final progress = context.logger.progress('Updating pubspec ...');
-  var pubspec = await File('./{{name}}/pubspec.yaml');
+  var pubspec = await File('./${context.vars['name']}/pubspec.yaml');
   var sink = pubspec.openWrite(mode: FileMode.append);
   sink.write('  assets:\n    - assets/icons/\n    - assets/images/\n');
   await sink.close();
