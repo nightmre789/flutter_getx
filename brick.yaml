@@ -1,7 +1,7 @@
-name: flutter_getx
+name: flutter_getx_template
 description: Generates a new Flutter app with GetX architecture
 version: 0.3.0
-repository: https://github.com/nightmre789/flutter_getx
+repository: https://github.com/mahmoudmahm00d/mason_brick_flutter_getx.git
 environment:
    mason: ">=0.1.0-dev <0.1.0"
 
