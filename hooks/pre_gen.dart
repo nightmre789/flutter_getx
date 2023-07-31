@@ -7,7 +7,7 @@ Future<void> run(HookContext context) async {
     'flutter',
     [
       'create',
-      '{{name}}',
+      context.vars['name'],
       '--description',
       context.vars['description'],
       '--org',
@@ -16,7 +16,7 @@ Future<void> run(HookContext context) async {
     runInShell: true,
   );
   progress.update('Cleaning up base app ...');
-  await File('./{{name}}/lib/main.dart').delete();
-  await File('./{{name}}/test/widget_test.dart').delete();
+  await File('./${context.vars['name']}/lib/main.dart').delete();
+  await File('./${context.vars['name']}/test/widget_test.dart').delete();
   progress.complete('Generated base flutter app');
 }

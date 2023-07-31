@@ -19,7 +19,8 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "base_app",
+      defaultTransition: Transition.cupertino,
+      title: "{{name}}",
       initialRoute: initialRoute,
       getPages: Routes.routes,
       theme: AppTheme.appTheme,
